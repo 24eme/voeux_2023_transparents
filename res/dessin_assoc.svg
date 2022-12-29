@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="470mm"
+   height="150mm"
+   viewBox="0 0 470 150"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="dessin_assoc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     id="namedview9"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.30518839"
+     inkscape:cx="950.23273"
+     inkscape:cy="334.21979"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="100"
+     height="100"
+     xlink:href="gabriel.global.svg"
+     id="image3"
+     x="10"
+     y="25"
+     inkscape:label="gabriel" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="100"
+     height="100"
+     xlink:href="honorine.global.svg"
+     id="image2844"
+     x="75"
+     y="25"
+     inkscape:label="honorine" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="100"
+     height="100"
+     xlink:href="jb.global.svg"
+     id="image3-5"
+     x="150"
+     y="25"
+     inkscape:label="jb" />
+  <image
+     width="100"
+     height="100"
+     xlink:href="nicolas.global.svg"
+     id="image8892"
+     x="210"
+     y="25"
+     inkscape:label="nicolas" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="100"
+     height="100"
+     xlink:href="tangui.global.svg"
+     id="image14940"
+     x="290"
+     y="25"
+     inkscape:label="tangui" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="100"
+     height="100"
+     xlink:href="vincent.global.svg"
+     id="image20988"
+     x="360"
+     y="25"
+     inkscape:label="vincent" />
+</svg>
