@@ -85,7 +85,7 @@
        inkscape:svg-dpi="96"
        width="100"
        height="100"
-       xlink:href="../svg/persona.svg"
+       xlink:href="persona.svg"
        id="image26"
        x="105"
        y="10"
@@ -107,6 +107,18 @@
        height="100"
        x="5.9833331"
        y="10" />
+
+    <image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="96"
+       width="100"
+       height="100"
+       xlink:href="persona0.svg"
+       id="image14"
+       x="5"
+       y="110"
+       inkscape:label="rouge" />
+
 
        <image
           preserveAspectRatio="none"

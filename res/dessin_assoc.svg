@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="470mm"
-   height="150mm"
-   viewBox="0 0 470 150"
+   width="420mm"
+   height="297mm"
+   viewBox="0 0 420 297"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
@@ -28,8 +28,8 @@
      showgrid="false"
      showguides="false"
      inkscape:zoom="0.30518839"
-     inkscape:cx="950.23273"
-     inkscape:cy="334.21979"
+     inkscape:cx="987.91438"
+     inkscape:cy="1258.2392"
      inkscape:window-width="1920"
      inkscape:window-height="1011"
      inkscape:window-x="0"
@@ -39,59 +39,100 @@
   <image
      preserveAspectRatio="none"
      inkscape:svg-dpi="96"
-     width="100"
-     height="100"
-     xlink:href="gabriel.global.svg"
-     id="image3"
-     x="10"
-     y="25"
-     inkscape:label="gabriel" />
-  <image
-     preserveAspectRatio="none"
-     inkscape:svg-dpi="96"
-     width="100"
-     height="100"
-     xlink:href="honorine.global.svg"
-     id="image2844"
-     x="75"
-     y="25"
-     inkscape:label="honorine" />
-  <image
-     preserveAspectRatio="none"
-     inkscape:svg-dpi="96"
-     width="100"
-     height="100"
-     xlink:href="jb.global.svg"
-     id="image3-5"
-     x="150"
-     y="25"
-     inkscape:label="jb" />
-  <image
-     width="100"
-     height="100"
-     xlink:href="nicolas.global.svg"
-     id="image8892"
-     x="210"
-     y="25"
-     inkscape:label="nicolas" />
-  <image
-     preserveAspectRatio="none"
-     inkscape:svg-dpi="96"
-     width="100"
-     height="100"
-     xlink:href="tangui.global.svg"
-     id="image14940"
-     x="290"
-     y="25"
+     width="133.87917"
+     height="135.46666"
+     xlink:href="groupe_tangui.global.svg"
+     id="image45234"
+     x="-105.14249"
+     y="176.56003"
+     transform="scale(-1,1)"
      inkscape:label="tangui" />
   <image
      preserveAspectRatio="none"
      inkscape:svg-dpi="96"
-     width="100"
-     height="100"
-     xlink:href="vincent.global.svg"
-     id="image20988"
-     x="360"
-     y="25"
+     width="125.41454"
+     height="123.35136"
+     xlink:href="groupe_honorine.global.svg"
+     id="image138026"
+     x="249.56651"
+     y="188.1328"
+     inkscape:label="honorine" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="110.91984"
+     height="112.23508"
+     xlink:href="group_vincent.global.svg"
+     id="image201954"
+     x="176.49171"
+     y="186.94116"
      inkscape:label="vincent" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="133.87917"
+     height="135.46666"
+     xlink:href="groupe_nicolas.global.svg"
+     id="image312939"
+     x="105.14249"
+     y="176.56003"
+     inkscape:label="nicolas" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="158.42053"
+     height="160.29903"
+     xlink:href="groupe_jb.global.svg"
+     id="image397263"
+     x="34.793667"
+     y="163.36876"
+     inkscape:label="jb" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="133.87917"
+     height="135.46666"
+     xlink:href="groupe_gabriel.global.svg"
+     id="image482949"
+     x="303.41132"
+     y="164.03609"
+     inkscape:label="gabriel" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:1.28986;stroke-linejoin:round;stroke-dashoffset:2.60787"
+     id="rect645775"
+     width="418.60855"
+     height="294.37714"
+     x="0.79922032"
+     y="2.1199598" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="96"
+     width="101.98824"
+     height="101.63187"
+     xlink:href="24eme.global.svg"
+     id="image107305"
+     x="160.59335"
+     y="88.159058"
+     inkscape:label="24eme" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="300"
+     width="509.54065"
+     height="478.46008"
+     xlink:href="decoration_a3.global.svg"
+     id="image129219-9"
+     x="-420"
+     y="-297"
+     inkscape:label="deco inv"
+     transform="scale(-1)" />
+  <image
+     preserveAspectRatio="none"
+     inkscape:svg-dpi="300"
+     width="509.54065"
+     height="491.65738"
+     xlink:href="decoration_a3.global.svg"
+     id="image13"
+     x="0.79922032"
+     y="2.1199598"
+     inkscape:label="deco" />
 </svg>
