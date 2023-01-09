@@ -16,3 +16,4 @@ tr -d '\n' < svg/text.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:
 echo '</svg>' >> res/carte_rouge.svg
 sed -i 's/#000000/#ff0000/g' res/carte_rouge.svg
 
+bash bin/generatepdf.sh
