@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="148mm"
+   viewBox="0 0 210 148"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+    <image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="300"
+       width="210"
+       height="147"
+       xlink:href="carte_feuille.svg"
+       id="feuille"
+       x="0"
+       y="0"
+       inkscape:label="feuille" />
+    <image
+       preserveAspectRatio="none"
+       inkscape:svg-dpi="300"
+       width="210"
+       height="147"
+       xlink:href="carte_transparent.svg"
+       id="transparent"
+       x="0"
+       y="0"
+       style="opacity:0.7"
+       inkscape:label="transparent" />
+</svg>
