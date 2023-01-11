@@ -1,5 +1,5 @@
 cd res
-inkscape carte_bleu.svg --export-area-page --batch-process -d 600 --export-type=pdf --export-filename=carte_bleu.pdf
-inkscape carte_rouge.svg --export-area-page --batch-process -d 600 --export-type=pdf --export-filename=carte_rouge.pdf
-pdftk carte_bleu.pdf carte_rouge.pdf cat output cartes.pdf
+inkscape carte*_*.svg --export-area-page --batch-process -d 600 --export-type=pdf
+pdftk carte1_*.pdf cat output cartes1.pdf
+pdftk carte2_*.pdf cat output cartes2.pdf
 cd ..
