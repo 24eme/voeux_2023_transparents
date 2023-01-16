@@ -4,9 +4,9 @@
 #   bash bin/generate_all.sh '#01496F' '#AF5F00'
 
 # Opposition des couleurs qui vont bien (éclatent pas les yeux s'impriment bien) :
-#   bleu clair / orange : #03829A / #FA7A00
-#   violet / vert : #8F004B / #69A300
-#   mauve / jaune vert : #64037F / #ADBD00 (à améliorer jaune qui ressort mal à l'impression difficile de caler comme il faut)
+#   bleu clair / orange : '#03829A' '#FA7A00'
+#   vert / violet : '#69A300' '#8F004B'
+#   jaune / rose : '#FFDF0F' '#DF0D5B' (à améliorer jaune qui ressort mal à l'impression difficile de caler comme il faut)
 
 couleur_feuille=$1
 couleur_transparent=$2
@@ -57,24 +57,32 @@ echo '</svg>' >> res/carte_transparent.svg
 
 if test "$couleur_feuille" = "bleu"; then
 sed -i 's/#000000/#03829A/g' res/carte_feuille.svg
+elif test "$couleur_feuille" = "orange"; then
+sed -i 's/#000000/#FA7A00/g' res/carte_feuille.svg
+elif test "$couleur_feuille" = "violet"; then
+sed -i 's/#000000/#8F004B/g' res/carte_feuille.svg
 elif test "$couleur_feuille" = "vert"; then
 sed -i 's/#000000/#69A300/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "rouge"; then
-sed -i 's/#000000/#8F004B/g' res/carte_feuille.svg
 elif test "$couleur_feuille" = "rose"; then
-sed -i 's/#000000/#FA7A00/g' res/carte_feuille.svg
+sed -i 's/#000000/#DF0D5B/g' res/carte_feuille.svg
+elif test "$couleur_feuille" = "jaune"; then
+sed -i 's/#000000/#FFDF0F/g' res/carte_feuille.svg
 else
 sed -i 's/#000000/'$couleur_feuille'/g' res/carte_feuille.svg
 fi
 
 if test "$couleur_transparent" = "bleu"; then
 sed -i 's/#000000/#03829A/g' res/carte_transparent.svg
+elif test "$couleur_transparent" = "orange"; then
+sed -i 's/#000000/#FA7A00/g' res/carte_transparent.svg
+elif test "$couleur_transparent" = "violet"; then
+sed -i 's/#000000/#8F004B/g' res/carte_transparent.svg
 elif test "$couleur_transparent" = "vert"; then
 sed -i 's/#000000/#69A300/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "rouge"; then
-sed -i 's/#000000/#8F004B/g' res/carte_transparent.svg
 elif test "$couleur_transparent" = "rose"; then
-sed -i 's/#000000/#FA7A00/g' res/carte_transparent.svg
+sed -i 's/#000000/#DF0D5B/g' res/carte_transparent.svg
+elif test "$couleur_transparent" = "jaune"; then
+sed -i 's/#000000/#FFDF0F/g' res/carte_transparent.svg
 else
 sed -i 's/#000000/'$couleur_transparent'/g' res/carte_transparent.svg
 fi
