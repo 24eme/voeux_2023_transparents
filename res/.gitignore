@@ -1,0 +1,5 @@
+# Ignore les fichiers de res/
+*
+
+# Sauf .gitignore...
+!.gitignore
