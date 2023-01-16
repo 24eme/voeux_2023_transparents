@@ -50,11 +50,10 @@ echo '</svg>' >> res/carte_feuille.svg
 echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>' > res/carte_transparent.svg
 echo '<svg width="210mm" height="148mm" viewBox="0 0 210 148" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">' >> res/carte_transparent.svg
 tr -d '\n' < svg/team.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>'  | grep -i '[a-z]' >> res/carte_transparent.svg
-tr -d '\n' < svg/mosaic_rouge.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
+tr -d '\n' < svg/mosaic_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 tr -d '\n' < svg/24eme.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 tr -d '\n' < res/text.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 echo '</svg>' >> res/carte_transparent.svg
-sed -i 's/#000000/#ff0000/g' res/carte_transparent.svg
 
 if test "$couleur_feuille" = "bleu"; then
 sed -i 's/#000000/#03829A/g' res/carte_feuille.svg
@@ -69,15 +68,15 @@ sed -i 's/#000000/'$couleur_feuille'/g' res/carte_feuille.svg
 fi
 
 if test "$couleur_transparent" = "bleu"; then
-sed -i 's/#ff0000/#03829A/g' res/carte_transparent.svg
+sed -i 's/#000000/#03829A/g' res/carte_transparent.svg
 elif test "$couleur_transparent" = "vert"; then
-sed -i 's/#ff0000/#69A300/g' res/carte_transparent.svg
+sed -i 's/#000000/#69A300/g' res/carte_transparent.svg
 elif test "$couleur_transparent" = "rouge"; then
-sed -i 's/#ff0000/#8F004B/g' res/carte_transparent.svg
+sed -i 's/#000000/#8F004B/g' res/carte_transparent.svg
 elif test "$couleur_transparent" = "rose"; then
-sed -i 's/#ff0000/#FA7A00/g' res/carte_transparent.svg
+sed -i 's/#000000/#FA7A00/g' res/carte_transparent.svg
 else
-sed -i 's/#ff0000/'$couleur_transparent'/g' res/carte_transparent.svg
+sed -i 's/#000000/'$couleur_transparent'/g' res/carte_transparent.svg
 fi
 
 # Couleur cibles repères
