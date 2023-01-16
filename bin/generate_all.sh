@@ -88,7 +88,7 @@ sed -i 's/#000000/'$couleur_transparent'/g' res/carte_transparent.svg
 fi
 
 # Couleur cibles repères
-# sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_feuille.svg
-# sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_transparent.svg
+sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_feuille.svg
+sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_transparent.svg
 
 bash bin/generatepdf.sh
