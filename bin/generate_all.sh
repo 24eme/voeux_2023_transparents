@@ -1,4 +1,12 @@
 #!/bin/bash
+# Utilisation : 
+#   bash bin/generate_all.sh 'vert' 'rouge'
+#   bash bin/generate_all.sh '#01496F' '#AF5F00'
+
+# Opposition des couleurs qui vont bien (éclatent pas les yeux s'impriment bien) :
+#   bleu clair / orange : #03829A / #FA7A00
+#   violet / vert : #8F004B / #69A300
+#   mauve / jaune vert : #64037F / #ADBD00 (à améliorer jaune qui ressort mal à l'impression difficile de caler comme il faut)
 
 couleur_feuille=$1
 couleur_transparent=$2
