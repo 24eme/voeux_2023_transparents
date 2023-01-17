@@ -1,7 +1,7 @@
 #!/bin/bash
 # Utilisation :
-#   bash bin/generate.sh 'bleu1' 'orange' 'Prénom'
-#   bash bin/generate.sh '#01496F' '#AF5F00' 'Prénom'
+#   bash bin/generate.sh 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
+#   bash bin/generate.sh 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
 
 
 # Opposition de couleurs prédéfinies qui vont bien (éclatent pas les yeux s'impriment bien) :
