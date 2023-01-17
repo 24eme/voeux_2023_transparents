@@ -1,3 +1,5 @@
+Télécharger les polices du dossier polices/ sur votre ordinateur
+
 Pour générer :
 
    bash bin/generate_all.sh red blue
