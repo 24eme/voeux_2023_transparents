@@ -45,6 +45,8 @@ tr -d '\n' < svg/24eme.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape
 tr -d '\n' < res/text.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_feuille.svg
 # Idem avec les reperes
 tr -d '\n' < svg/reperes_feuille.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_feuille.svg
+#Idem pour le "code"
+tr -d '\n' < svg/code_feuille.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_feuille.svg
 # Ferme le svg
 echo '</svg>' >> res/carte_feuille.svg
 
@@ -56,6 +58,7 @@ tr -d '\n' < svg/mosaic_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | se
 tr -d '\n' < svg/24eme.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 tr -d '\n' < res/text.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 tr -d '\n' < svg/reperes_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
+tr -d '\n' < svg/code_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 echo '</svg>' >> res/carte_transparent.svg
 
 if test "$couleur_feuille" = "bleu"; then
@@ -90,8 +93,12 @@ else
 sed -i 's/#000000/'$couleur_transparent'/g' res/carte_transparent.svg
 fi
 
-# Couleur cibles repères
+# Couleur cibles repères & code
 sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_feuille.svg
 sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_transparent.svg
+
+
+sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_feuille.svg
+sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_transparent.svg
 
 bash bin/generatepdf.sh
