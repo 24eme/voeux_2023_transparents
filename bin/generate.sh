@@ -1,7 +1,7 @@
 #!/bin/bash
 # Utilisation :
-#   bash bin/generate.sh 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
-#   bash bin/generate.sh 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
+#   bash bin/generate.sh '0' 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
+#   bash bin/generate.sh '0' 'Nom' 'bleu1' 'orange' 'Ligne1' 'Ligne2' 'Ligne3' 'Ligne4'
 
 
 # Opposition de couleurs prédéfinies qui vont bien (éclatent pas les yeux s'impriment bien) :
@@ -10,15 +10,16 @@
 #   vert2 / rose
 #   rose2 / vert3
 
-nom=$1
-couleur_feuille=$2
-couleur_transparent=$3
+num_ligne_csv=$1
+nom=$2
+couleur_feuille=$3
+couleur_transparent=$4
 # Le message sur 4 lignes
 # MAXIMUM 32 caractères par lignes
-ligne1=$4
-ligne2=$5
-ligne3=$6
-ligne4=$7
+ligne1=$5
+ligne2=$6
+ligne3=$7
+ligne4=$8
 
 if ! test "$nom"; then
     echo $0 COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT NOM;
@@ -87,4 +88,4 @@ sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_transparent.svg
 sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_feuille.svg
 sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_transparent.svg
 
-bash bin/generatepdf.sh $nom
+bash bin/generatepdf.sh $num_ligne_csv $nom
