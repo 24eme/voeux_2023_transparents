@@ -1,13 +1,13 @@
 #!/bin/bash
 # Utilisation : 
-#   bash bin/generate_all.sh 'vert' 'rouge'
-#   bash bin/generate_all.sh '#01496F' '#AF5F00'
+#   bash bin/generate_all.sh 'bleu1' 'orange' 'Prénom'
+#   bash bin/generate_all.sh '#01496F' '#AF5F00' 'Prénom'
 
-# Opposition des couleurs qui vont bien (éclatent pas les yeux s'impriment bien) :
-#   bleu1 / orange : '#03829A' '#FA7A00'
-#   vert1 / violet : '#69A300' ''#69A300'
-#   vert2 / rose : '#00ff80' '#ff007f'
-#   rose2 / vert3 : '#ff80D8' '#89DB7C'
+# Opposition de couleurs prédéfinies qui vont bien (éclatent pas les yeux s'impriment bien) :
+#   bleu1 / orange
+#   vert1 / violet
+#   vert2 / rose
+#   rose2 / vert3
 
 couleur_feuille=$1
 couleur_transparent=$2
