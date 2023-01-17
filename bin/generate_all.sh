@@ -4,9 +4,10 @@
 #   bash bin/generate_all.sh '#01496F' '#AF5F00'
 
 # Opposition des couleurs qui vont bien (éclatent pas les yeux s'impriment bien) :
-#   bleu clair / orange : '#03829A' '#FA7A00'
-#   vert / violet : '#69A300' '#8F004B'
-#   jaune / rose : '#FFDF0F' '#DF0D5B' (à améliorer jaune qui ressort mal à l'impression difficile de caler comme il faut)
+#   bleu1 / orange : '#03829A' '#FA7A00'
+#   vert1 / violet : '#69A300' ''#69A300'
+#   vert2 / rose : '#00ff80' '#ff007f'
+#   rose2 / vert3 : '#ff80D8' '#89DB7C'
 
 couleur_feuille=$1
 couleur_transparent=$2
@@ -16,6 +17,12 @@ if ! test "$nom"; then
     echo $0 COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT NOM;
     exit 1;
 fi
+
+# Couleurs prédéfinies
+declare -A colors=( [bleu1]='#03829A' [orange]='#FA7A00' [vert1]='#69A300' [violet]='#69A300' [vert2]='#00ff80'  [rose]='#ff007f' [rose2]='#ff80D8' [vert3]='#89DB7C' )
+
+if [ ${colors[$couleur_feuille]+_} ]; then couleur_feuille=${colors[$couleur_feuille]}; fi
+if [ ${colors[$couleur_transparent]+_} ]; then couleur_transparent=${colors[$couleur_transparent]}; fi
 
 # Le message sur 4 lignes
 # POUR TEST : met les couleurs utilisées dans le texte
@@ -58,6 +65,7 @@ tr -d '\n' < res/code_feuille.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/i
 # Ferme le svg
 echo '</svg>' >> res/carte_feuille.svg
 
+sed -i 's/#000000/'$couleur_feuille'/g' res/carte_feuille.svg
 
 echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>' > res/carte_transparent.svg
 echo '<svg width="210mm" height="148mm" viewBox="0 0 210 148" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">' >> res/carte_transparent.svg
@@ -69,42 +77,11 @@ tr -d '\n' < svg/reperes_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | s
 tr -d '\n' < res/code_transparent.svg | sed 's/</\n</g' | sed 's/>/>\n/g' | sed 's/inkscape:[^= ]*="[^"]*" //g' | sed 's/sodipodi:[^= ]*="[^"]*" //g' | grep -v '<?xml' | grep -v '<!--' | grep -v '<svg' | grep -v '<sodipodi:namedview' | grep -v '</svg>' | grep -v '<defs' | grep -i '[a-z]' >> res/carte_transparent.svg
 echo '</svg>' >> res/carte_transparent.svg
 
-if test "$couleur_feuille" = "bleu"; then
-sed -i 's/#000000/#03829A/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "orange"; then
-sed -i 's/#000000/#FA7A00/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "violet"; then
-sed -i 's/#000000/#8F004B/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "vert"; then
-sed -i 's/#000000/#69A300/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "rose"; then
-sed -i 's/#000000/#DF0D5B/g' res/carte_feuille.svg
-elif test "$couleur_feuille" = "jaune"; then
-sed -i 's/#000000/#FFDF0F/g' res/carte_feuille.svg
-else
-sed -i 's/#000000/'$couleur_feuille'/g' res/carte_feuille.svg
-fi
-
-if test "$couleur_transparent" = "bleu"; then
-sed -i 's/#000000/#03829A/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "orange"; then
-sed -i 's/#000000/#FA7A00/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "violet"; then
-sed -i 's/#000000/#8F004B/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "vert"; then
-sed -i 's/#000000/#69A300/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "rose"; then
-sed -i 's/#000000/#DF0D5B/g' res/carte_transparent.svg
-elif test "$couleur_transparent" = "jaune"; then
-sed -i 's/#000000/#FFDF0F/g' res/carte_transparent.svg
-else
 sed -i 's/#000000/'$couleur_transparent'/g' res/carte_transparent.svg
-fi
 
 # Couleur cibles repères & code
 sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_feuille.svg
 sed -i 's/#d6c200/'"$couleur_feuille"'/g' res/carte_transparent.svg
-
 
 sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_feuille.svg
 sed -i 's/#008000/'"$couleur_feuille"'/g' res/carte_transparent.svg
