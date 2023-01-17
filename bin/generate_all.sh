@@ -5,7 +5,7 @@
 
 # Opposition des couleurs qui vont bien (éclatent pas les yeux s'impriment bien) :
 #   bleu1 / orange : '#03829A' '#FA7A00'
-#   vert1 / violet : '#69A300' ''#69A300'
+#   vert1 / violet : '#69A300' '#69A300'
 #   vert2 / rose : '#00ff80' '#ff007f'
 #   rose2 / vert3 : '#ff80D8' '#89DB7C'
 
@@ -25,11 +25,12 @@ if [ ${colors[$couleur_feuille]+_} ]; then couleur_feuille=${colors[$couleur_feu
 if [ ${colors[$couleur_transparent]+_} ]; then couleur_transparent=${colors[$couleur_transparent]}; fi
 
 # Le message sur 4 lignes
+# MAXIMUM 32 caractères par lignes
 # POUR TEST : met les couleurs utilisées dans le texte
 msg1=$(printf '%s\n' "Test couleur : $couleur_feuille $couleur_transparent" | sed -e 's/#//g')
-msg2="Nous te souhaitons une très belle"
-msg3="année pleine 2 joie d'amour et bien"
-msg4="sûr de bonheur intense !!"
+msg2="Nous te souhaitons une bonne"
+msg3="année pleine d'amour, 2 rires et"
+msg4="bien sûr de bonheur intense !!"
 
 # Copie le text dans res pour y mettre msg1, msg2, ...
 cp -f svg/text.svg res/text.svg
