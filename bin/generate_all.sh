@@ -19,7 +19,7 @@ if ! test "$nom"; then
 fi
 
 # Couleurs prédéfinies
-declare -A colors=( [bleu1]='#03829A' [orange]='#FA7A00' [vert1]='#69A300' [violet]='#69A300' [vert2]='#00ff80'  [rose]='#ff007f' [rose2]='#ff80D8' [vert3]='#89DB7C' )
+declare -A colors=( [bleu1]='#03829A' [orange]='#FA7A00' [vert1]='#69A300' [violet]='#8F004B' [vert2]='#00ff80'  [rose]='#ff007f' [rose2]='#ff80D8' [vert3]='#89DB7C' )
 
 if [ ${colors[$couleur_feuille]+_} ]; then couleur_feuille=${colors[$couleur_feuille]}; fi
 if [ ${colors[$couleur_transparent]+_} ]; then couleur_transparent=${colors[$couleur_transparent]}; fi
