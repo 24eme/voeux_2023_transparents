@@ -41,27 +41,27 @@
      id="layer1">
     <path
        id="rect898"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0;stroke:none"
        inkscape:label="Bordure droite"
-       d="M 196.62417 8.6578695 L 196.62417 11.44788 L 196.62417 13.618807 L 196.62417 136.52758 L 212.73689 136.52758 L 212.73689 11.44788 L 198.83696 11.44788 L 198.83696 8.6578695 L 196.62417 8.6578695 z " />
+       d="M 196.5,8.6578695 V 11.44788 13.618807 136.52758 H 210 V 11.44788 H 198.35398 V 8.6578695 Z" />
+    <path
+       id="rect898-3"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0"
+       inkscape:label="Bordure haute"
+       d="M 201.97116,0 H 197.84118 194.62763 12.688858 V 13.5 H 197.84118 V 1.85398 h 4.12998 z" />
+    <path
+       id="rect898-3-6"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0"
+       inkscape:label="Bordure basse"
+       d="M 8.0007471,148 H 12.132354 15.34717 197.35761 V 134.5 H 12.132354 v 11.64602 H 8.0007471 Z" />
     <rect
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0"
        id="rect1370"
-       width="17.533096"
+       width="13.5"
        height="124.96883"
-       x="-4.1292906"
+       x="0"
        y="11.554948"
        inkscape:label="Bordure gauche" />
-    <path
-       id="rect1367"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0"
-       inkscape:label="Bordure haute"
-       d="M 12.184786 -4.1708049 L 12.184786 9.0046183 L 11.838037 9.0046183 L 11.838037 12.176518 L 13.499951 12.176518 L 13.499951 9.4805583 L 196.51927 9.4805583 L 196.51927 10.961605 L 197.61068 10.961605 L 197.61068 9.4805583 L 197.9843 9.4805583 L 197.9843 -4.1708049 L 12.184786 -4.1708049 z " />
-    <path
-       id="rect1379"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0"
-       inkscape:label="Bordure basse"
-       d="M 196.62417 134.2223 L 196.62417 137.11204 L 196.42264 137.11204 L 196.42264 138.55743 L 14.028084 138.55743 L 14.028084 136.97562 L 13.403833 136.97562 L 13.403833 135.35401 L 11.191565 135.35401 L 11.191565 140.31495 L 12.135177 140.31495 L 12.135177 152.75037 L 197.98223 152.75037 L 197.98223 139.18324 L 198.83696 139.18324 L 198.83696 134.2223 L 196.62417 134.2223 z " />
     <path
        id="path10095"
        style="color:#000000;display:inline;fill:#d6c200;fill-opacity:1;stroke-width:0;stroke-dasharray:none;stroke:none"
