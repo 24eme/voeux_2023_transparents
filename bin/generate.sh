@@ -21,8 +21,8 @@ ligne2=$6
 ligne3=$7
 ligne4=$8
 
-if ! test "$nom"; then
-    echo $0 COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT NOM;
+if ! test "$ligne4"; then
+    echo $0 COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT NOM LIGNE1 LIGNE2 LIGNE3 LIGNE4;
     exit 1;
 fi
 
