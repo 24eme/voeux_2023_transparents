@@ -1,4 +1,8 @@
 #!/bin/bash
+if ! test "$1"; then
+    echo "Donner le fichier csv";
+    exit 1;
+fi
 
 dossier="res/"
 dossier_print_feuilles="res/impression/feuilles"
