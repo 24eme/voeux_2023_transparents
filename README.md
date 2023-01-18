@@ -1,3 +1,5 @@
+Télécharger les polices du dossier polices/ sur votre ordinateur
+
 Pour générer :
 
    bash bin/generate_all.sh red blue
@@ -11,3 +13,7 @@ Les SVG des deux couleurs se trouvent alors dans res/
 Les fichiers 'cartes_superposees' permette d'avoir une évaludation du résultat.
 
 Les originaux sont dans svg/
+
+Pour combiner les pdfs :
+
+Installer psutils
