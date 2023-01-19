@@ -7,7 +7,6 @@ fi
 dossier="res/"
 dossier_print_feuilles="res/impression/feuilles"
 dossier_print_transparents="res/impression/transparents"
-qrcode_pdf="qr_code.pdf"
 
 mkdir -p $dossier_print_feuilles $dossier_print_transparents
 
@@ -33,8 +32,6 @@ do
      #verifier que celui d'avant et le sien ont bien été générer sinon ne fait pas la combinaison
      if [  -n "$premiere_feuille" ] && [  -n "$deuxieme_feuille" ] && [  -n "$premier_transparent" ] && [  -n "deuxieme_transparent" ]; then
 	bash bin/combine_pdf.sh $premiere_feuille $deuxieme_feuille $dossier_print_feuilles/$previous\_$line.pdf
-	pdftk $dossier_print_feuilles/$previous\_$line.pdf $qrcode_pdf cat output $dossier_print_feuilles/$previous\_$line #concatene avec verso
-	mv $dossier_print_feuilles/$previous\_$line $dossier_print_feuilles/$previous\_$line.pdf
 	bash bin/combine_pdf.sh $premier_transparent $deuxieme_transparent $dossier_print_transparents/$previous\_$line.pdf
      fi
    fi
