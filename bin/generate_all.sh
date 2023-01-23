@@ -5,6 +5,10 @@ if ! test "$1"; then
 fi
 
 dossier="res/"
+
+#vide le dossie pour bien tout regenerer
+rm -r $dossier/*
+
 dossier_print_feuilles="res/impression/feuilles"
 dossier_print_transparents="res/impression/transparents"
 
@@ -16,8 +20,16 @@ suffixe_transparent="carte_transparent.pdf"
 i=1
 sed 1d $1 | while IFS=';' read -r nom couleur_feuille couleur_transparent ligne1 ligne2 ligne3 ligne4
 do
+  color_line=$(expr $(expr $i % 8) + 1)
+  echo $color_line
+  couleur1=$(head -n $color_line couleurs.csv | tail -n 1 | cut -d ';' -f 1)
+  couleur2=$(head -n $color_line couleurs.csv | tail -n 1 | cut -d ';' -f 2)
+  echo $couleur1
+  echo $couleur2
+
   line=$(printf "%03d" $i)
-  bash bin/generate.sh "$line" "$nom" "$couleur_feuille" "$couleur_transparent" "$ligne1" "$ligne2" "$ligne3" "$ligne4"
+
+  bash bin/generate.sh "$line" "$nom" "$couleur1" "$couleur2" "$ligne1" "$ligne2" "$ligne3" "$ligne4"
 
   if (($i % 2 == 0)); then
 
@@ -38,3 +50,6 @@ do
 
   ((i++))
 done
+
+pdftk $dossier_print_feuilles/*.pdf cat output $dossier_print_feuilles/feuilles.pdf
+pdftk $dossier_print_transparents/*.pdf cat output $dossier_print_feuilles/transparents.pdf
