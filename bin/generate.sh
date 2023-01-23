@@ -16,10 +16,11 @@ couleur_feuille=$3
 couleur_transparent=$4
 # Le message sur 4 lignes
 # MAXIMUM 32 caractères par lignes
-ligne1=$5
-ligne2=$6
-ligne3=$7
-ligne4=$8
+# SANS LES ESPACES
+ligne1=$(echo $5 | sed "s/^ *//g" | sed "s/ *$//g")
+ligne2=$(echo $6 | sed "s/^ *//g" | sed "s/ *$//g")
+ligne3=$(echo $7 | sed "s/^ *//g" | sed "s/ *$//g")
+ligne4=$(echo $8 | sed "s/^ *//g" | sed "s/ *$//g")
 
 if ! test "$ligne4"; then
     echo $0 NUM_LIGNE NOM COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT LIGNE1 LIGNE2 LIGNE3 LIGNE4;
