@@ -39,7 +39,6 @@ messages=( "$ligne1" "$ligne2" "$ligne3" "$ligne4" )
 for i in "${!messages[@]}"
 do
   sed -E -i "s#(id=\"message${i}\">)[^<]*(</tspan>)#\1${messages[$i]}\2#g" res/text.svg
-  echo "$i" "${messages[$i]}"
 done
 
 # Copie le text cadre dans res pour y mettre nom prénom
