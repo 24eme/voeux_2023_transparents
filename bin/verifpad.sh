@@ -1,4 +1,4 @@
-curl -s $1 | grep ";" | grep -v "^;" | awk -F ';' '{
+if echo $1 | grep http > /dev/null ; then curl -s $1 ; else cat $1 ; fi | grep ";" | grep -v "^;" | awk -F ';' '{
 if(length($1) == 0) { print "Il manque le prénom (Lignes complètes : " $0 ")" }
 else if(length($2) > 0) { print "Il manque une colonne (Lignes complètes : " $0 ")" }
 else if(length($3) > 0) { print "Il manque une colonne (Lignes complètes : " $0 ")" }
