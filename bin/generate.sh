@@ -22,7 +22,7 @@ ligne2=$(echo $6 | sed "s/^ *//g" | sed "s/ *$//g")
 ligne3=$(echo $7 | sed "s/^ *//g" | sed "s/ *$//g")
 ligne4=$(echo $8 | sed "s/^ *//g" | sed "s/ *$//g")
 
-if ! test "$ligne4"; then
+if ! test "$ligne1"; then
     echo $0 NUM_LIGNE NOM COULEUR_RGB_FEUILLE COULEUR_RGB_TRANSPARENT LIGNE1 LIGNE2 LIGNE3 LIGNE4;
     exit 1;
 fi
